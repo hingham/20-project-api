@@ -6,12 +6,12 @@
     "title": "Core API"
   },
   "host": "localhost:3000",
-  "basePath": "/api/v1",
+  "basePath": "/",
   "schemes": [
     "http"
   ],
   "paths": {
-    "/{model}": {
+    "/api/v1/{model}": {
       "parameters": [
         {
           "in": "path",
@@ -43,7 +43,7 @@
         }
       }
     },
-    "/{model}/{id}": {
+    "/api/v1/{model}/{id}": {
       "parameters": [
         {
           "in": "path",
@@ -104,6 +104,7 @@
       }
     }
   },
+
   "definitions": {
     "getAll": {
       "type": "array",

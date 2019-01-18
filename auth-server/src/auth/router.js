@@ -2,12 +2,19 @@
 
 const express = require('express');
 const authRouter = express.Router();
+const swaggerUI = require('swagger-ui-express');
+const cwd = process.cwd();
 
 const Role = require('./roles-model');
 
 const User = require('./users-model.js');
 const auth = require('./middleware.js');
 const oauth = require('./oauth/google.js');
+
+// Swagger Docs
+const swaggerDocs = require(`${cwd}/docs/config/lab-20-swagger.json`);
+authRouter.use('/doc/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+
 
 authRouter.post('/signup', (req, res, next) => {
   let user = new User(req.body);
