@@ -2,10 +2,19 @@
 
 const express = require('express');
 const authRouter = express.Router();
+const swaggerUI = require('swagger-ui-express');
+const cwd = process.cwd();
+
+const Role = require('./roles-model');
 
 const User = require('./users-model.js');
 const auth = require('./middleware.js');
 const oauth = require('./oauth/google.js');
+
+// Swagger Docs
+const swaggerDocs = require(`${cwd}/docs/config/lab-20-swagger.json`);
+authRouter.use('/doc/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+
 
 authRouter.post('/signup', (req, res, next) => {
   let user = new User(req.body);
@@ -13,6 +22,7 @@ authRouter.post('/signup', (req, res, next) => {
     .then( (user) => {
       User.findOne({_id: user._id})
         .then(user => {
+          // does not have access to the acl
           req.token = user.generateToken();
           req.user = user;
           res.set('token', req.token);
@@ -23,7 +33,18 @@ authRouter.post('/signup', (req, res, next) => {
     .catch(next);
 });
 
-authRouter.post('/signin', auth(), (req, res, next) => {
+authRouter.post('/newrole', (req, res, next) => {
+  let role = new Role(req.body);
+  role.save()
+    .then(role => {
+      res.status(200).send('new role created');
+    })
+    .catch(next);
+
+
+});
+
+authRouter.post('/signin', auth('capability'), (req, res, next) => {
   res.cookie('auth', req.token);
   res.send(req.token);
 });
@@ -40,5 +61,6 @@ authRouter.post('/key', auth, (req,res,next) => {
   let key = req.user.generateKey();
   res.status(200).send(key);
 });
+
 
 module.exports = authRouter;
