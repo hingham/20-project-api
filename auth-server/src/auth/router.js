@@ -37,7 +37,7 @@ authRouter.post('/newrole', (req, res, next) => {
 
 });
 
-authRouter.post('/signin', auth(), (req, res, next) => {
+authRouter.post('/signin', auth('capability'), (req, res, next) => {
   res.cookie('auth', req.token);
   res.send(req.token);
 });
@@ -54,5 +54,6 @@ authRouter.post('/key', auth, (req,res,next) => {
   let key = req.user.generateKey();
   res.status(200).send(key);
 });
+
 
 module.exports = authRouter;

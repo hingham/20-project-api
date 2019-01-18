@@ -9,10 +9,10 @@
 const cwd = process.cwd();
 
 const express = require('express');
-const swaggerUI = require('swagger-ui-express');
+// const swaggerUI = require('swagger-ui-express');
 
-const modelFinder = require(`${cwd}/src/middleware/model-finder.js`);
-
+const modelFinder = require(`../middleware/model-finder.js`);
+const auth = require('../auth/middleware.js');
 
 
 const router = express.Router();
@@ -21,16 +21,17 @@ const router = express.Router();
 router.param('model', modelFinder);
 
 // Swagger Docs
-const swaggerDocs = require(`${cwd}/docs/config/swagger.json`);
-router.use('/api/v1/doc/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+// const swaggerDocs = require(`${cwd}/docs/config/swagger.json`);
+// router.use('/api/v1/doc/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 // API Routes
-router.get('/api/v1/:model', auth, handleGetAll);
-router.post('/api/v1/:model', auth, handlePost);
+router.get('/api/v1/:model', auth('read'), handleGetAll);
+router.post('/api/v1/:model', auth('create'),  handlePost);
+router.get('/api/v1/:model/:id', auth('read'), handleGetOne);
+router.put('/api/v1/:model/:id', auth('update'), handlePut);
+router.delete('/api/v1/:model/:id', auth('delete'), handleDelete);
 
-router.get('/api/v1/:model/:id', auth, handleGetOne);
-router.put('/api/v1/:model/:id', auth, handlePut);
-router.delete('/api/v1/:model/:id', auth, handleDelete);
+router.get('/api/v1/schema', auth('super'), printSchema);
 
 // Route Handlers
 
@@ -103,6 +104,12 @@ function handleDelete(request,response,next) {
   request.model.delete(request.params.id)
     .then( result => response.status(200).json(result) )
     .catch( next );
+}
+
+
+function printSchema(request, response, next){
+  let schema = {username: {String:required}};
+  response.status(200).send(shema);
 }
 
 module.exports = router;
