@@ -1,9 +1,9 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## Project Name: API Server
 
-### Author: Student/Group Name
+### Author: Hannah Ingham, George Raymond
 
 ### Links and Resources
 * [repo](http://xyz.com)
@@ -12,12 +12,13 @@
 * [front-end](http://xyz.com) (when applicable)
 
 #### Documentation
-* [swagger](http://xyz.com) (API assignments only)
+* [swagger] /docs/
 * [jsdoc](http://xyz.com) (All assignments)
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+#### `roles-model.js, users-model.js, players-model.js, teams-model.js, router.js mongo.js`
+### Middleware: 
+#### `404.js 500.js model-finder.js`
 
 ###### `foo(thing) -> string`
 Usage Notes or examples
@@ -27,12 +28,12 @@ Usage Notes or examples
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `PORT` - 3000
+* `MONGODB_URI` - mongodb://localhost:27017/baseball
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
+* Endpoint: `/signup`
   * Returns a JSON object with abc in it.
 * Endpoint: `/bing/zing/`
   * Returns a JSON object with xyz in it.
