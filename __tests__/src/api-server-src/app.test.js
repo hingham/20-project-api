@@ -56,7 +56,7 @@ describe('api server', () => {
 
   it('should be able to post to /api/v1/players', ()  => {
 
-    let obj = {name:'John', bats:'R',throws:'R',position:'C',team:'Bunnies'};
+    let obj = {name:'John',team:'Bunnies'};
 
     return mockRequest
       .post('/api/v1/players')
@@ -71,7 +71,7 @@ describe('api server', () => {
 
   it('following a post to players, should find a single record', () => {
 
-    let obj = {name:'John', bats:'R',throws:'R',position:'C',team:'Bunnies'};
+    let obj = {name:'John',team:'Bunnies'};
 
     return mockRequest
       .post('/api/v1/players')

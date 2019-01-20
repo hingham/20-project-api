@@ -2,7 +2,7 @@
 
 const express = require('express');
 const authRouter = express.Router();
-const swaggerUI = require('swagger-ui-express');
+// const swaggerUI = require('swagger-ui-express');
 const cwd = process.cwd();
 
 const Role = require('./roles-model');
@@ -12,8 +12,8 @@ const auth = require('./middleware.js');
 const oauth = require('./oauth/google.js');
 
 // Swagger Docs
-const swaggerDocs = require(`${cwd}/docs/config/lab-20-swagger.json`);
-authRouter.use('/doc/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+// const swaggerDocs = require(`${cwd}/docs/config/lab-20-swagger.json`);
+// authRouter.use('/doc/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 
 authRouter.post('/signup', (req, res, next) => {
@@ -44,7 +44,8 @@ authRouter.post('/newrole', (req, res, next) => {
 
 });
 
-authRouter.post('/signin', auth('capability'), (req, res, next) => {
+authRouter.post('/signin', auth(), (req, res, next) => {
+
   res.cookie('auth', req.token);
   res.send(req.token);
 });

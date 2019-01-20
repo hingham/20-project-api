@@ -9,7 +9,7 @@
 const cwd = process.cwd();
 
 const express = require('express');
-const swaggerUI = require('swagger-ui-express');
+// const swaggerUI = require('swagger-ui-express');
 
 const modelFinder = require(`../middleware/model-finder.js`);
 const auth = require('../auth/middleware.js');
@@ -21,8 +21,8 @@ const router = express.Router();
 router.param('model', modelFinder);
 
 // Swagger Docs
-const swaggerDocs = require(`${cwd}/docs/config/20labswagger.json`);
-router.use('/api/v1/doc/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+// const swaggerDocs = require(`${cwd}/docs/config/20labswagger.json`);
+// router.use('/api/v1/doc/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 // API Routes
 router.get('/api/v1/:model', auth('read'), handleGetAll);
