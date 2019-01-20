@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('./roles-model.js');
+const util = require('util');
 
 const SINGLE_USE_TOKENS = !!process.env.SINGLE_USE_TOKENS;
 const TOKEN_EXPIRE = process.env.TOKEN_LIFETIME || '5m';
@@ -97,6 +98,7 @@ users.statics.authenticateToken = function(token) {
  */
 users.statics.authenticateBasic = function(auth) {
   let query = {username:auth.username};
+  // console.log(`this.findOne: ${util.inspect(this.findOne(query),{depth:3})}`);
   return this.findOne(query)
     .then( user => user && user.comparePassword(auth.password) )
     .catch(error => {throw error;});
@@ -121,14 +123,14 @@ users.methods.comparePassword = function(password) {
  * @returns {string} token that has been encrypted with jwt 
  */
 users.methods.generateToken = function(type) {
-  console.log(`This.acl: ${this.acl}`);
+  // console.log(`This.acl: ${this.acl}`);
   let token = {
     id: this._id,
     capabilities: this.acl.capabilities,
     type: type || 'user',
   };
   
-  console.log('token', token);
+  // console.log('token', token);
 
   let options = {};
   if ( type !== 'key' && !! TOKEN_EXPIRE ) { 
