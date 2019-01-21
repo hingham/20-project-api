@@ -7,12 +7,12 @@
 
 ### Links and Resources
 * [repo]https://github.com/georgeraymond92/20-project-api
-* [travis](http://xyz.com)
+* [travis]
 * https://git.heroku.com/auth-api-20.git
 
 #### Documentation
 * [swagger] auth-api-20.herokuapp.com/api/v1/doc/
-* [jsdoc] 
+* [jsdoc] auth-api-20.herokuapp.com/doc/
 
 ### Modules
 ##### `roles-model.js, users-model.js, players-model.js, teams-model.js, router.js mongo.js`
@@ -63,17 +63,16 @@ team: `{"team": "team"}`
 #### Running the app
 * `npm start`
 * Endpoint: app.js
-* Endpoint: `/signin`
-  * Enters user in the mongo database
+* Endpoint: `/signup`
+  * Enters user in the mongo database and allows them to signup
 * Endpoint: `/singin`
   * Signs in a user with correct credentials
-* Endpoint: `/oauth`
-  * Signs in a user with bearer authorization (with a token)
+* Endpoint: `/newrole`
+  * Allows users to add a new role into the database
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* How do you run tests? 
+`npm run tests`
 
 #### UML
-Link to an image of the UML for your application and response to events
+![image](./assets/api-server-uml.JPG)
