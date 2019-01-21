@@ -7,7 +7,7 @@
 
 ### Links and Resources
 * [repo]https://github.com/georgeraymond92/20-project-api
-* [travis]
+* [travis]https://www.travis-ci.com/georgeraymond92/20-project-api
 * https://git.heroku.com/auth-api-20.git
 
 #### Documentation
