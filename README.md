@@ -6,13 +6,14 @@
 ### Author: Hannah Ingham, George Raymond
 
 ### Links and Resources
-* [repo]https://github.com/georgeraymond92/20-project-api
-* [travis]https://www.travis-ci.com/georgeraymond92/20-project-api
-* https://git.heroku.com/auth-api-20.git
+* [repo](https://github.com/georgeraymond92/20-project-api)
+* [travis](https://www.travis-ci.com/georgeraymond92/20-project-api)
+* [heroku](https://git.heroku.com/auth-api-20.git)
+
 
 #### Documentation
-* [swagger] auth-api-20.herokuapp.com/api/v1/doc/
-* [jsdoc] auth-api-20.herokuapp.com/doc/
+* [swagger](auth-api-20.herokuapp.com/api/v1/doc/)
+* [jsdoc](auth-api-20.herokuapp.com/doc/)
 
 ### Modules
 ##### `roles-model.js, users-model.js, players-model.js, teams-model.js, router.js mongo.js`
