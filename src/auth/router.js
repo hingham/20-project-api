@@ -9,7 +9,6 @@ const Role = require('./roles-model');
 
 const User = require('./users-model.js');
 const auth = require('./middleware.js');
-const oauth = require('./oauth/google.js');
 
 // Swagger Docs
 // const swaggerDocs = require(`${cwd}/docs/config/lab-20-swagger.json`);
@@ -37,7 +36,7 @@ authRouter.post('/newrole', (req, res, next) => {
   let role = new Role(req.body);
   role.save()
     .then(role => {
-      res.status(200).send('new role created');
+      res.status(200).send(role);
     })
     .catch(next);
 
