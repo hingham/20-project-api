@@ -8,25 +8,17 @@
 ### Links and Resources
 * [repo]https://github.com/georgeraymond92/20-project-api
 * [travis](http://xyz.com)
-* [back-end]George Raymond [8:07 PM]
-https://git.heroku.com/auth-api-20.git
-* [front-end](http://xyz.com) (when applicable)
+* https://git.heroku.com/auth-api-20.git
 
 #### Documentation
-* [swagger] /docs/
-* [jsdoc]George Raymond [8:07 PM]
-https://git.heroku.com/auth-api-20.git/api/v1/doc
+* [swagger] auth-api-20.herokuapp.com/api/v1/doc/
+* [jsdoc] 
 
 ### Modules
 ##### `roles-model.js, users-model.js, players-model.js, teams-model.js, router.js mongo.js`
 ##### Middleware: 
 `404.js 500.js model-finder.js`
 
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
 
 ###### `foo(thing) -> string`
 npm start
@@ -43,7 +35,7 @@ npm start
 `http :4000/oauth "Authorization:Bearer ENTER TOKEN HERE`
 
 ####json-model-data 
-* players or teams
+* players and teams database
 players: `{"name": "name", "team", "team"}`
 team: `{"team": "team"}`
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Model</title>
+    <title>JSDoc: Module: src/auth/users-model</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Model</h1>
+    <h1 class="page-title">Module: src/auth/users-model</h1>
 
     
 
@@ -28,9 +28,8 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Model<span class="signature">(schema)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description">Class representing a generic mongo model.</div>
+            
         
     
 </header>
@@ -39,78 +38,21 @@
     <div class="container-overview">
     
         
-
-    
-    <h2>Constructor</h2>
-    
-
-    
-    <h4 class="name" id="Model"><span class="type-signature"></span>new Model<span class="signature">(schema)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Model Constructor
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
+            <div class="description">User Model
+functions for the users database</div>
         
 
         
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>schema</code></td>
             
 
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
 
 
-            
-            </td>
 
-            
 
-            
 
-            <td class="description last">mongo schema</td>
-        </tr>
 
-    
-    </tbody>
-</table>
+
+
 
 
 
@@ -146,7 +88,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line4">line 4</a>
+        <a href="auth_users-model.js.html">auth/users-model.js</a>, <a href="auth_users-model.js.html#line3">line 3</a>
     </li></ul></dd>
     
 
@@ -174,6 +116,7 @@
 
 
 
+        
     
     </div>
 
@@ -200,16 +143,13 @@
     
 
     
-    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="signature">(_id)</span><span class="type-signature"> &rarr; {*}</span></h4>
+    <h4 class="name" id="~authenticateBasicChecksifthepasswordinthesame"><span class="type-signature">(inner) </span>authenticateBasic
+Checks if the password in the same<span class="signature">(auth)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
     
 
 
-
-<div class="description">
-    Deletes a recod in the model
-</div>
 
 
 
@@ -244,13 +184,13 @@
 
         <tr>
             
-                <td class="name"><code>_id</code></td>
+                <td class="name"><code>auth</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">*</span>
 
 
             
@@ -260,7 +200,7 @@
 
             
 
-            <td class="description last">Mongo Record ID</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -301,7 +241,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line49">line 49</a>
+        <a href="auth_users-model.js.html">auth/users-model.js</a>, <a href="auth_users-model.js.html#line100">line 100</a>
     </li></ul></dd>
     
 
@@ -327,6 +267,10 @@
 <h5>Returns:</h5>
 
         
+<div class="param-desc">
+    the user object if the passwords is the same
+</div>
+
 
 
 <dl>
@@ -335,315 +279,9 @@
     </dt>
     <dd>
         
-<span class="param-type">*</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">(_id)</span><span class="type-signature"> &rarr; {*}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Retrieves one or more records
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>_id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">optional mongo record id</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line19">line 19</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="post"><span class="type-signature"></span>post<span class="signature">(record)</span><span class="type-signature"> &rarr; {*}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Create a new record
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>record</code></td>
-            
-
-            <td class="type">
-            
-                
 <span class="param-type">object</span>
 
 
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">matches the format of the schema</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line29">line 29</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
     </dd>
 </dl>
 
@@ -659,16 +297,13 @@
     
 
     
-    <h4 class="name" id="put"><span class="type-signature"></span>put<span class="signature">(_id, record)</span><span class="type-signature"> &rarr; {*}</span></h4>
+    <h4 class="name" id="~authenticateTokenParsesthetoken,rejectiftokenisinset,otherwiseaddtotokentotheset"><span class="type-signature">(inner) </span>authenticateToken
+Parses the token, reject if token is in set, otherwise add to token to the set<span class="signature">(token)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
     
 
 
-
-<div class="description">
-    Replaces a record in the database
-</div>
 
 
 
@@ -703,13 +338,13 @@
 
         <tr>
             
-                <td class="name"><code>_id</code></td>
+                <td class="name"><code>token</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">*</span>
 
 
             
@@ -719,30 +354,7 @@
 
             
 
-            <td class="description last">Mongo Record ID</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>record</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The record data to replace. ID is a required field</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -783,7 +395,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line40">line 40</a>
+        <a href="auth_users-model.js.html">auth/users-model.js</a>, <a href="auth_users-model.js.html#line79">line 79</a>
     </li></ul></dd>
     
 
@@ -809,6 +421,10 @@
 <h5>Returns:</h5>
 
         
+<div class="param-desc">
+    the user object, based on the parsedToken id
+</div>
+
 
 
 <dl>
@@ -817,7 +433,622 @@
     </dt>
     <dd>
         
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~can"><span class="type-signature">(inner) </span>can<span class="signature">(capability)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>capability</code></td>
+            
+
+            <td class="type">
+            
+                
 <span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="auth_users-model.js.html">auth/users-model.js</a>, <a href="auth_users-model.js.html#line150">line 150</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    based on if the capability is in capabilities array
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~comparePasswordChecksifthepasswordisvalidbyusingbycrptcomparewhenusersignin"><span class="type-signature">(inner) </span>comparePassword
+Checks if the password is valid by using bycrpt compare when user signin<span class="signature">(password)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="auth_users-model.js.html">auth/users-model.js</a>, <a href="auth_users-model.js.html#line114">line 114</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    true if password is valid
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~createFromOauth"><span class="type-signature">(inner) </span>createFromOauth<span class="signature">(email)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="auth_users-model.js.html">auth/users-model.js</a>, <a href="auth_users-model.js.html#line55">line 55</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the user object, found or created in database
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~generateTokenSetstypeoftokenobjectto'user'ortypeifprovidedAddscapabilitesarraytothetokenobject"><span class="type-signature">(inner) </span>generateToken
+Sets type of token object to 'user' or type if provided
+Adds capabilites array to the token object<span class="signature">(type)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="auth_users-model.js.html">auth/users-model.js</a>, <a href="auth_users-model.js.html#line125">line 125</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    token that has been encrypted with jwt
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
 
 
     </dd>
