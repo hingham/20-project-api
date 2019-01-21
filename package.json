@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
     "start": "node index.js",
     "watch": "nodemon index.js",
     "test-watch": "jest --watchAll",
@@ -22,13 +23,8 @@
     "dotenv": "^6.1.0",
     "express": "^4.16.3",
     "jest": "^23.6.0",
-    "jsonwebtoken": "^8.4.0",
-    "mongodb-memory-server": "^2.7.3",
-    "mongoose": "^5.3.13",
-    "mongoose-schema-jsonschema": "^1.1.15",
-    "morgan": "^1.9.0",
+    "jsdoc": "^3.5.5",
     "require-directory": "^2.1.1",
-    "supertest": "^3.3.0",
     "swagger-ui-express": "^4.0.2"
   }
 }
