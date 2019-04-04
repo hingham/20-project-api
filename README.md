@@ -7,12 +7,12 @@
 
 ### Links and Resources
 
-* [repo](https://github.com/georgeraymond92/20-project-api)
-* [travis](https://www.travis-ci.com/georgeraymond92/20-project-api)
-* [heroku](https://git.heroku.com/auth-api-20.git)
+[repo](https://github.com/hingham/20-project-api)
 
+[![Build Status](https://www.travis-ci.com/hingham/20-project-api.svg?branch=master)](https://www.travis-ci.com/hingham/20-project-api)
 
 #### Documentation
+*Links need to be updated
 * [swagger](auth-api-20.herokuapp.com/api/v1/doc/)
 * [jsdoc](auth-api-20.herokuapp.com/doc/)
 
@@ -22,7 +22,6 @@
 `404.js 500.js model-finder.js`
 
 
-###### `foo(thing) -> string`
 npm start
 ##### signup: echo 
 `{"username":"example","password":"example-password"}' | http post :4000/signup`
