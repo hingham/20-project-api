@@ -6,25 +6,55 @@
 ### Author: Hannah Ingham, George Raymond
 
 ### Links and Resources
-* [repo]https://github.com/georgeraymond92/20-project-api
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+
+* [repo](https://github.com/georgeraymond92/20-project-api)
+* [travis](https://www.travis-ci.com/georgeraymond92/20-project-api)
+* [heroku](https://git.heroku.com/auth-api-20.git)
+
 
 #### Documentation
-* [swagger] /docs/
-* [jsdoc](http://xyz.com) (All assignments)
+* [swagger](auth-api-20.herokuapp.com/api/v1/doc/)
+* [jsdoc](auth-api-20.herokuapp.com/doc/)
 
 ### Modules
 ##### `roles-model.js, users-model.js, players-model.js, teams-model.js, router.js mongo.js`
 ##### Middleware: 
 `404.js 500.js model-finder.js`
 
-###### `foo(thing) -> string`
-Usage Notes or examples
 
-###### `bar(array) -> array`
-Usage Notes or examples
+###### `foo(thing) -> string`
+npm start
+##### signup: echo 
+`{"username":"example","password":"example-password"}' | http post :4000/signup`
+
+##### Basic Singin: signin: 
+`http :4000/signin -a example:example-password`
+
+##### Basic new role:
+`echo ‘{“role”:“test”,“capabilities”:[“test”]}’ | http post :3000/newrole`
+
+##### Bearer signin: 
+`http :4000/oauth "Authorization:Bearer ENTER TOKEN HERE`
+
+####json-model-data 
+* players and teams database
+players: `{"name": "name", "team", "team"}`
+team: `{"team": "team"}`
+
+##### handleGetAll:
+`http get :4000/api/v1/{model} -a username:password`
+
+##### handleGetOne:
+`http get :4000/api/v1/{model}/{id} -a username:password`
+
+##### handlePost:
+`echo '{ json-model-data }' | http post :4000/api/v1/{model} -a username:password`
+
+##### handlePut:
+`echo '{ json-model-data }' | http put :4000/api/v1/{model}/{id} -a username:password`
+
+##### handleDelete:
+` http delete :4000/api/v1/{model}/{id} -a username:password`
 
 ###### `foo(thing) -> string`
 npm start
@@ -72,11 +102,18 @@ team: `{"team": "team"}`
   * Signs in a user with correct credentials
 * Endpoint: `/oauth`
   * Signs in a user with bearer authorization (with a token)
+
+* Endpoint: `/signup`
+  * Enters user in the mongo database and allows them to signup
+* Endpoint: `/singin`
+  * Signs in a user with correct credentials
+* Endpoint: `/newrole`
+  * Allows users to add a new role into the database
+
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* How do you run tests? 
+`npm run tests`
 
 #### UML
-Link to an image of the UML for your application and response to events
+![image](./assets/api-server-uml.JPG)

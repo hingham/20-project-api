@@ -72,7 +72,7 @@
     "/newrole": {
       "post": {
         "tags": [
-          "newRole"
+          "new-role"
         ],
         "produces": [
           "application/xml",
@@ -86,7 +86,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/newRole"
+                "$ref": "#/definitions/new-role"
               }
             }
           }
@@ -256,7 +256,7 @@
         "name": "singin"
       }
     },
-    "newRole": {
+    "new-role": {
       "type": "object",
       "properties": {
         "role": {

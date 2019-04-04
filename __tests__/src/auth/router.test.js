@@ -3,6 +3,7 @@
 process.env.SECRET = 'test';
 
 const jwt = require('jsonwebtoken');
+const util = require('util');
 
 const Roles = require('../../../src/auth/roles-model.js');
 const server = require('../../../src/app.js').server;
@@ -58,6 +59,7 @@ describe('Auth Router', () => {
         return mockRequest.post('/signin')
           .auth(users[userType].username, users[userType].password)
           .then(results => {
+            // console.log('the text from results', results.text);
             var token = jwt.verify(results.text, process.env.SECRET);
             expect(token.id).toEqual(id);
             expect(token.capabilities).toBeDefined();
@@ -73,6 +75,34 @@ describe('Auth Router', () => {
             expect(token.capabilities).toBeDefined();
           });
       });
+
+
+      // it('can add a new role', () => {
+      //   let obj = {role: 'tester', capabilities:['test']};
+
+      //   return Roles.post(obj)
+      //     .then(record => {
+      //       Object.keys(obj).forEach(key =>{
+      //         expect(record[key]).toEqual(obj[key]);
+      //       })
+      //     });
+      // });
+
+      it('can add a new role', () => {
+        let obj = {role: 'tester', capabilities:['test']};
+
+        return mockRequest.post('/newrole')
+        .send(obj)
+          .then(record => {
+            console.log('role text', record.text);
+            console.log('json parse 1', JSON.parse(record.text).role);
+            let returnedRole = JSON.parse(record.text).role;
+
+            expect(returnedRole).toEqual(obj.role);
+          
+          });
+      });
+
 
     });
     

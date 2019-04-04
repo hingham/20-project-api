@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Players</title>
+    <title>JSDoc: Module: src/auth/middleware</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Players</h1>
+    <h1 class="page-title">Module: src/auth/middleware</h1>
 
     
 
@@ -28,9 +28,8 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Players<span class="signature">()</span><span class="type-signature"></span></h2>
         
-            <div class="class-description">Class representing a Player.</div>
+            
         
     
 </header>
@@ -39,16 +38,12 @@
     <div class="container-overview">
     
         
+            <div class="description">Middleware
+middleware for user authentication</div>
+        
 
-    
-    <h2>Constructor</h2>
-    
-
-    
-    <h4 class="name" id="Players"><span class="type-signature"></span>new Players<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
+        
+            
 
 
 
@@ -93,7 +88,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_players_players-model.js.html">models/players/players-model.js</a>, <a href="models_players_players-model.js.html#line10">line 10</a>
+        <a href="auth_middleware.js.html">auth/middleware.js</a>, <a href="auth_middleware.js.html#line4">line 4</a>
     </li></ul></dd>
     
 
@@ -121,19 +116,9 @@
 
 
 
+        
     
     </div>
-
-    
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li><a href="Model.html">Model</a></li>
-    </ul>
-
 
     
 
@@ -158,16 +143,13 @@
     
 
     
-    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="signature">(_id)</span><span class="type-signature"> &rarr; {*}</span></h4>
+    <h4 class="name" id="~authBasicAuthenticatesuserifsigninginusingauthBasic"><span class="type-signature">(inner) </span>authBasic
+Authenticates user if signing in using authBasic<span class="signature">(str)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Deletes a recod in the model
-</div>
 
 
 
@@ -202,13 +184,13 @@
 
         <tr>
             
-                <td class="name"><code>_id</code></td>
+                <td class="name"><code>str</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">*</span>
 
 
             
@@ -218,7 +200,7 @@
 
             
 
-            <td class="description last">Mongo Record ID</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -236,11 +218,6 @@
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Model.html#delete">Model#delete</a>
-    </li></ul></dd>
     
 
     
@@ -264,7 +241,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line49">line 49</a>
+        <a href="auth_middleware.js.html">auth/middleware.js</a>, <a href="auth_middleware.js.html#line34">line 34</a>
     </li></ul></dd>
     
 
@@ -290,19 +267,11 @@
 <h5>Returns:</h5>
 
         
+<div class="param-desc">
+    the user output from authenticateBasic function in user-model
+</div>
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-    </dd>
-</dl>
 
     
 
@@ -316,16 +285,13 @@
     
 
     
-    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">(_id)</span><span class="type-signature"> &rarr; {*}</span></h4>
+    <h4 class="name" id="~authBearerAuthenticatesuserwithbearersignin"><span class="type-signature">(inner) </span>authBearer
+Authenticates user with bearer signin<span class="signature">(str)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Retrieves one or more records
-</div>
 
 
 
@@ -360,13 +326,13 @@
 
         <tr>
             
-                <td class="name"><code>_id</code></td>
+                <td class="name"><code>str</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">*</span>
 
 
             
@@ -376,7 +342,7 @@
 
             
 
-            <td class="description last">optional mongo record id</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -394,11 +360,6 @@
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Model.html#get">Model#get</a>
-    </li></ul></dd>
     
 
     
@@ -422,7 +383,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line19">line 19</a>
+        <a href="auth_middleware.js.html">auth/middleware.js</a>, <a href="auth_middleware.js.html#line54">line 54</a>
     </li></ul></dd>
     
 
@@ -448,19 +409,11 @@
 <h5>Returns:</h5>
 
         
+<div class="param-desc">
+    the user object
+</div>
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-    </dd>
-</dl>
 
     
 
@@ -474,16 +427,13 @@
     
 
     
-    <h4 class="name" id="post"><span class="type-signature"></span>post<span class="signature">(record)</span><span class="type-signature"> &rarr; {*}</span></h4>
+    <h4 class="name" id="~authenticateAuthenticatesuserifcapabilityisprovided"><span class="type-signature">(inner) </span>authenticate
+Authenticates user if capability is provided<span class="signature">(object)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Create a new record
-</div>
 
 
 
@@ -518,13 +468,13 @@
 
         <tr>
             
-                <td class="name"><code>record</code></td>
+                <td class="name"><code>object</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">*</span>
 
 
             
@@ -534,7 +484,7 @@
 
             
 
-            <td class="description last">matches the format of the schema</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -552,11 +502,6 @@
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Model.html#post">Model#post</a>
-    </li></ul></dd>
     
 
     
@@ -580,7 +525,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line29">line 29</a>
+        <a href="auth_middleware.js.html">auth/middleware.js</a>, <a href="auth_middleware.js.html#line67">line 67</a>
     </li></ul></dd>
     
 
@@ -603,24 +548,6 @@
 
 
 
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-    </dd>
-</dl>
-
-    
 
 
 
@@ -632,16 +559,13 @@
     
 
     
-    <h4 class="name" id="put"><span class="type-signature"></span>put<span class="signature">(_id, record)</span><span class="type-signature"> &rarr; {*}</span></h4>
+    <h4 class="name" id="~authErrorHandlesallerrors"><span class="type-signature">(inner) </span>authError
+Handles all errors<span class="signature">(object)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Replaces a record in the database
-</div>
 
 
 
@@ -676,13 +600,13 @@
 
         <tr>
             
-                <td class="name"><code>_id</code></td>
+                <td class="name"><code>object</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">*</span>
 
 
             
@@ -692,30 +616,7 @@
 
             
 
-            <td class="description last">Mongo Record ID</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>record</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The record data to replace. ID is a required field</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -733,11 +634,6 @@
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Model.html#put">Model#put</a>
-    </li></ul></dd>
     
 
     
@@ -761,7 +657,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="models_mongo.js.html">models/mongo.js</a>, <a href="models_mongo.js.html#line40">line 40</a>
+        <a href="auth_middleware.js.html">auth/middleware.js</a>, <a href="auth_middleware.js.html#line85">line 85</a>
     </li></ul></dd>
     
 
@@ -784,24 +680,6 @@
 
 
 
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-    </dd>
-</dl>
-
-    
 
 
 
