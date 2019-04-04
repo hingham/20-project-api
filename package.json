@@ -7,7 +7,7 @@
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
     "start": "node index.js",
     "watch": "nodemon index.js",
-    "test-watch": "jest --watchAll",
+    "test-watch": "jest --watchAll --verbose --coverage",
     "test": "jest --verbose --coverage"
   },
   "jest": {
