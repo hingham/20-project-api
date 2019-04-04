@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
     "start": "node index.js",
     "watch": "nodemon index.js",
     "test-watch": "jest --watchAll",
-    "test": "jest"
+    "test": "jest --verbose --coverage"
   },
   "jest": {
     "testEnvironment": "node"
@@ -22,13 +23,14 @@
     "dotenv": "^6.1.0",
     "express": "^4.16.3",
     "jest": "^23.6.0",
+    "jsdoc": "^3.5.5",
     "jsonwebtoken": "^8.4.0",
-    "mongodb-memory-server": "^2.7.3",
-    "mongoose": "^5.3.13",
-    "mongoose-schema-jsonschema": "^1.1.15",
-    "morgan": "^1.9.0",
+    "mongodb-memory-server": "^3.0.0",
+    "mongoose": "^5.4.5",
+    "mongoose-schema-jsonschema": "^1.2.1",
+    "morgan": "^1.9.1",
     "require-directory": "^2.1.1",
-    "supertest": "^3.3.0",
+    "supertest": "^3.4.1",
     "swagger-ui-express": "^4.0.2"
   }
 }

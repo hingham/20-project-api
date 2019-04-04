@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: middleware/model-finder.js</title>
+    <title>JSDoc: Module: src/middleware/500</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,38 +17,131 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: middleware/model-finder.js</h1>
+    <h1 class="page-title">Module: src/middleware/500</h1>
 
     
 
 
 
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
-/**
- * Model Finder Middleware
- * @module middleware/model-finder
- */
 
-/**
- * Model Finder Middleware
- * Evaluates req.params.model (i.e. /api/v1/:model/) and returns an instance of the specified model.
- * Because node require is cached, the instance will only be created once, no matter how many times a model is called for.
- * In the event the model is not found, node will throw a "MODULE_NOT_FOUND" error which the error middleware in the server will pick up.
- * @param req {object} Express Request Object
- * @param res {object} Express Response Object
- * @param next {function} Express middleware next()
- */
-module.exports = (req,res,next) => {
-  let modelName = req.params.model.replace(/[^a-z0-9-_]/gi, '');
-  req.model = require(`../models/${modelName}/${modelName}-model.js`);
-  next();
-};
-</code></pre>
-        </article>
-    </section>
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">500 error
+handles all errors</div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="middleware_500.js.html">middleware/500.js</a>, <a href="middleware_500.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
